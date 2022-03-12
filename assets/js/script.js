@@ -24,7 +24,7 @@ var taskFormHandler =  function(event){
     
     //send it as an argument to crateTaskEl
     createTaskEl(taskDataObj);
-}
+};
 
 var createTaskEl = function (taskDataObj){
 
@@ -44,6 +44,6 @@ var createTaskEl = function (taskDataObj){
     // add entire list item to list
     tasksToDoEl.appendChild(listItemEl);
 
-}
+};
 
 formEl.addEventListener("submit", taskFormHandler);
