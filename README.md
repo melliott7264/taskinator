@@ -26,7 +26,7 @@ Once the task is added, you have buttons to Edit or Delete the task and another 
     To Delete the task completely,  just click on the Delete button.  
 
 
-    ![Taskinator screen shot](./assets/images/ScreenShot.png)
+ ![Taskinator screen shot](./assets/images/ScreenShot.png)
 
 ## Credits
 
