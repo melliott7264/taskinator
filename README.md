@@ -2,47 +2,37 @@
 
 ## Description
 
-The goal of this project is to build an interactive task manager application based on the Kanban methodology.
+This applicaton is an interactive task manager based on the Kanban board methodology.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- The goal of this project is top produce an applicaton that will be able to track and manage project tasks in order to speed development.
+- This project will speed development by visually tracking of all significant project tasks and showing instantly the status of each task relative to each other.
+- This methodology will make it much less likely that a critical task will be overlooked or allowed to block other tasks.
+- Another important goal of this project is to learn the DOM and the associated Web API as it is referenced in JavaScript.  
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Nothing needs to be installed for this applicaton other than a current version of a web browser such as Chrome, Firefox, or Safari.   All data will be saved locally in the browser.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Run the applicatoin from this URL:  https://melliott7264.github.io/taskinator/
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Begin adding tasks by entering the task name in the indicated field a the top left of the screen.   Next, select the task type from the drop down menu to the right.  Click on the Add Task button to add the task to the Tasks To Do list.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Once the task is added, you have buttons to Edit or Delete the task and another drop down menu to change the status of the task from To Do to In Progress or Completed.  
+
+    To change the status, simply click on the drop down menu and select the new status.
+    To Edit the task name, simply click on the Edit button.  The task name will populate the Task Name field at the top left of the screen allowing you to make changes.  You can also change the task type at that time.   Once satisfied with your changes, click on the Save Task button to make the updates.
+    To Delete the task completely,  just click on the Delete button.  
+
+
+    ![Taskinator screen shot](./assets/images/ScreenShot.png)
 
 ## Credits
 
 Mark Elliott  https://github.com/melliott7264
 
-This application was build as part of the Module 4 exercise for the Coding Boot Camp at the University of Richmond starting February 2022: https://courses.bootcampspot.com/courses/1201/pages/4-dot-1-5-build-the-html?module_item_id=460497.   Starter CSS code was provided.
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+This application was built as part of the Module 4 exercise for the Coding Boot Camp at the University of Richmond starting February 2022: https://courses.bootcampspot.com/courses/1201/pages/4-dot-1-5-build-the-html?module_item_id=460497.   Detailed instructions were provided for all but the localStorage load code and final code optimization.  Starter CSS code was provided.
 
 ## License
 
@@ -68,22 +58,4 @@ SOFTWARE.
 
 ---
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
