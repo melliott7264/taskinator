@@ -133,11 +133,9 @@ var taskButtonHandler = function(event) {
   var targetEl = event.target;
 
   if (targetEl.matches(".edit-btn")) {
-    console.log("edit", targetEl);
     var taskId = targetEl.getAttribute("data-task-id");
     editTask(taskId);
   } else if (targetEl.matches(".delete-btn")) {
-    console.log("delete", targetEl);
     var taskId = targetEl.getAttribute("data-task-id");
     deleteTask(taskId);
   }
@@ -172,17 +170,13 @@ var taskStatusChangeHandler = function(event) {
 };
 
 var editTask = function(taskId) {
-  console.log(taskId);
-
   // get task list item element
   var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
 
   // get content from task name and type
   var taskName = taskSelected.querySelector("h3.task-name").textContent;
-  console.log(taskName);
 
   var taskType = taskSelected.querySelector("span.task-type").textContent;
-  console.log(taskType);
 
   // write values of taskname and taskType to form to be edited
   document.querySelector("input[name='task-name']").value = taskName;
@@ -195,7 +189,6 @@ var editTask = function(taskId) {
 };
 
 var deleteTask = function(taskId) {
-  console.log(taskId);
   // find task list element with taskId value and remove it
   var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
   taskSelected.remove();
@@ -225,7 +218,6 @@ var saveTasks = function() {
 var loadTasks = function () {
     // load/get tasks from local storage
     tasks = localStorage.getItem("tasks");
-    console.log(tasks);
     if (!tasks) {
         tasks = [];
         return false;
@@ -233,7 +225,6 @@ var loadTasks = function () {
 
     // convert string into an array
     tasks = JSON.parse(tasks);
-    console.log(tasks);
 
     // recreate tasks/DOM elements on the page
     for ( i = 0; i < tasks.length; i++) {
@@ -252,10 +243,19 @@ var loadTasks = function () {
         
         listItemEl.appendChild(taskActionsEl);
 
-        console.log(listItemEl);
+        if (tasks[i].status === "to do") {
+            listItemEl.querySelector("select[name='status-change']").selectedIndex = 0;
+            tasksToDoEl.appendChild(listItemEl);
+        } else if (tasks[i].status === "in progress") {
+            listItemEl.querySelector("select[name='status-change']").selectedIndex = 1;
+            tasksInProgressEl.appendChild(listItemEl);        
+        } else if (tasks[i].status === "complete") {
+            listItemEl.querySelector("select[name='status-change']").selectedIndex = 2;
+            tasksCompletedEl.appendChild(listItemEl);        
+        }
 
+        taskIdCounter++;
     }
-
 
 };
 
